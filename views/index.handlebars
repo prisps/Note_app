@@ -1,0 +1,30 @@
+<script type='text/javascript'>console.log('does this run')</script>
+<div class="note-section row">
+    <div class="col-lg-12">
+        <h4>Welcome back, {{user}}</h4>
+        <p>Add a note</p>
+        <form id="add" class="row" >
+            <div class="col col-sm-9">
+                <textarea type="text" name="note" placeholder="start typing here..."></textarea>
+            </div>
+            <div class="col col-sm-3">
+                <input type="submit" value="Add">
+            </div>
+        </form>
+    </div>
+
+    <div class="col-lg-12">
+        <h4>Notes<span class="saving">Saving...</span></h4>
+        <div id="notes">
+            {{#each notes}}
+            <div class="row">
+            <div class="note justify-content-center">
+                <span class="input"><textarea data-id="{{ @index }}">{{ this }}</textarea></span>
+
+                <button class="remove btn btn-xs" data-id="{{ @index }}"><i class="fa fa-trash"
+                        aria-hidden="true"></i></button>
+            </div>
+            {{/each}}
+        </div></div>
+    </div>
+</div>
